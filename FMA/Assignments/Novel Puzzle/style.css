@@ -1,0 +1,17 @@
+span{
+    text-transform: uppercase;
+}
+.first{
+    background-image: url(download.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    font-family: 'Haettenschweiler' 'Impact' 'Segoe UI Black' sans-serif;
+}
+.first::first-letter{
+    font-size: 80px;
+    text-decoration: underline red;
+    text-align: right;
+}
+.first-word{
+    font-weight: bold;
+}
