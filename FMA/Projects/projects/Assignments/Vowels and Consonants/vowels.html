@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Vowels and Consonants</title>
+</head>
+<body>
+  <h2>Press any key</h2>
+  <script>
+    document.addEventListener('keypress', (e) => {
+      let letter = e.key;
+      
+      if (letter.length !== 1) {
+        console.log(`Please press only one key.`);
+        return;
+      }
+      let lowerLetter = letter.toLowerCase()
+
+      if (/[a-z]/.test(lowerLetter)) {
+
+        if ("aeiou".includes(lowerLetter)) {
+
+          console.log(`You typed a vowel.`)
+        } else {
+          console.log(`You typed a consonant.`)
+        }
+      }
+      else if (/[0-9]/.test(letter)) {
+        console.log(`You typed a number.`)
+      }
+      else {
+        console.log(`You typed a symbol.`)
+      }
+    })
+  </script>
+</body>
+</html>
