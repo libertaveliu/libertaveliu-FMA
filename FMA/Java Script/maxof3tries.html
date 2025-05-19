@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+     let correctPassword = `12341234`
+let userInput
+let attempts = 0
+const maxAttempts = 3
+let isAuthenticated = false
+
+do {
+    let triesLeft = maxAttempts - attempts
+    userInput = prompt(`Enter password (${triesLeft} ${triesLeft === 1 ? `try` : `tries`} left):`)
+    attempts++;
+
+    if (userInput === correctPassword) {
+        isAuthenticated = true
+        break;
+    }
+
+} while (attempts < maxAttempts)
+
+if (isAuthenticated) {
+    alert(`Welcome!`)
+} else {
+    alert(`You can't try anymore.`)
+}
+
+    </script>
+    
+</body>
+</html>

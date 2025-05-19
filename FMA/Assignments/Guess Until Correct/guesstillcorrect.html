@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    
+let secretNumber = Math.floor(Math.random() * 6) + 1
+let guess = Infinity
+let attempts = 0
+
+do {
+    guess = parseInt(prompt(`Guess a number between 1 and 13:`))
+    attempts++;
+} while (guess !== secretNumber);
+
+if (attempts === 1) {
+    alert(`Congratulations, you guessed the correct number in 1 try!`)
+} else {
+    alert(`Congratulations, you guessed the correct number in ${guess} guesses`)
+}
+
+    </script>
+</body>
+</html>
