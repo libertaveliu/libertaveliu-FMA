@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+let count = parseInt(prompt(`Enter how many Fibonacci numbers you want to generate:`));
+
+if (isNaN(count) || count <= 0) {
+  console.log(`Please enter a valid positive number:`);
+} else {
+  let fib = [1, 1];
+
+  if (count === 1) {
+    console.log(1);
+  } else {
+    for (let i = 2; i < count; i++) {
+      fib[i] = fib[i - 1] + fib[i - 2];
+    }
+
+    console.log(`Fibonacci Sequence:`);
+    for (let i = 0; i < count; i++) {
+      console.log(fib[i]);
+    }
+  }
+}
+
+    </script>
+</body>
+</html>
