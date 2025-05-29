@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+function printHelloWorld() {
+  for (let i = 0; i < 10; i++) {
+    console.log(`Hello World`)
+  }
+}
+printHelloWorld()
+
+function printMessage(message) {
+  console.log(message)
+}
+printMessage(`This is a message!`)
+
+function kilometersToMiles(km) {
+  const miles = km * 0.621371
+  return miles
+}
+console.log(kilometersToMiles(10)) 
+
+
+function areaOfCircle(radius) {
+  return Math.PI * radius * radius
+}
+console.log(areaOfCircle(5))
+
+
+function welcomeUser(name, surname) {
+  return `Welcome, ${name} ${surname}`
+}
+console.log(welcomeUser(`Liberta`, `Veliu`))
+    </script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>User's Tasks</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background-color: #f2f2f2;
+    }
+    .task-container {
+      background-color: steelblue;
+      color: white;
+      padding: 30px;
+      margin: 50px auto;
+      width: 60%;
+      border-radius: 8px;
+    }
+    h1 {
+      font-size: 32px;
+      margin-bottom: 20px;
+    }
+    .task {
+      font-size: 20px;
+      margin: 5px 0;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="task-container" id="taskContainer">
+    <h1 id="dateHeading"></h1>
+    <div id="taskList"></div>
+  </div>
+
+  <script>
+    const today = new Date()
+    const formattedDate = today.toLocaleDateString('en-GB')
+
+    
+    document.getElementById('dateHeading').textContent = `Tasks for ${formattedDate}`
+
+    
+    const taskListDiv = document.getElementById('taskList')
+    while (true) {
+      const task = prompt(`Enter a task (leave empty to finish):`)
+      if (!task) break
+      const p = document.createElement('p')
+      p.className = 'task'
+      p.textContent = task
+      taskListDiv.appendChild(p)
+    }
+  </script>
+
+</body>
+</html>
+
