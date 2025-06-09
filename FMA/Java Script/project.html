@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script src="notifications.js"></script>
+    <script>
+let defaultTitle = document.title;
+let faviconElement = document.querySelector(`link[rel="icon"]`);
+let defaultFavIcon = faviconElement ? faviconElement.href: ``;
+let notificationsInterval;
+let isInDefaultState = true;
+let bellIcon = `bell.png`;
+
+function startNotification(message) {
+  if(notificationsInterval)
+  endNotification()
+notificationsInterval = setInterval()
+}
+</script>
+</body>
+</html>
